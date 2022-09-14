@@ -1,0 +1,26 @@
+CREATE TABLE cards (id INTEGER PRIMARY KEY, name TEXT, sport TEXT, year INTEGER, price INTEGER);
+
+
+INSERT INTO cards values
+(1, "Bobby Witt Jr", "Baseball", 2022, 105),
+(2, "Patrick Mahomes", "Football", 2018, 125),
+(3, "Julio Rodriguez", "Baseball", 2019, 45),
+(17, "Julio Rodriguez", "Baseball", 2019, 25),
+(4, "Ken Griffey Jr", "Baseball", 2009, 45),
+(5, "Frank Thomas", "Baseball", 2010, 45),
+(6, "Alex Rodriguez", "Baseball", 2000, 45),
+(7, "Barry Bonds", "Baseball", 2019, 45),
+(8, "Jose Canseco", "Baseball", 2019, 45),
+(9, "Ozzie Smith", "Baseball", 2019, 75),
+(10, "Tony Gwynn", "Baseball", 2019, 45),
+(11, "Jim Palmer", "Baseball", 1999, 15),
+(12, "Eric Davis", "Baseball", 1989, 15),
+(13, "Barry Larkin", "Baseball", 1995, 45),
+(14, "Matt Williams", "Baseball", 1994, 45),
+(15, "Joey Votto", "Baseball", 2009, 45),
+(16, "Larry Walker", "Baseball", 1997, 45);
+
+Select * FROM cards
+ORDER By price;
+
+SELECT MAX(price) FROM cards
