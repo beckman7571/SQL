@@ -1,0 +1,31 @@
+Create Table Famous_People (
+	Id INTEGER Primary Key AUTOINCREMENT,
+	Fullname TEXT,
+	age INTEGER);
+
+Insert INTO Famous_People (fullname, age) VALUES ('Tom Brady', '44');
+Insert INTO Famous_People (fullname, age) VALUES ('Michael Jordan', '55');
+Insert INTO Famous_People (fullname, age) VALUES ('Tom Hanks', '65');
+Insert INTO Famous_People (fullname, age) VALUES ('Judy Garland', '100');
+
+
+Create Table Athlete (
+    Id INTEGER Primary Key AUTOINCREMENT,
+    FP_ID INTEGER,
+    Sport TEXT);
+Insert INTo Athlete (FP_ID, Sport) VALUES ('1', 'Football');
+Insert INTO Athlete (FP_ID, Sport) VALUES ('2', 'Basketball');
+
+Create Table Movie_Star (
+    Id INTEGER Primary Key AUTOINCREMENT,
+    FP_ID INTEGER,
+    Recent_Movie TEXT);
+Insert INTO Movie_Star (FP_ID, Recent_Movie) VALUES ('3', 'Castaway');
+Insert INTO Movie_Star (FP_ID, Recent_Movie) Values ('4', 'Wizard of Oz');
+
+Select fp.Fullname, fp.age, a.Sport, ms.Recent_Movie 
+    From Famous_People fp
+    Left outer Join Athlete a
+    On fp.Id=a.FP_ID
+    Left outer Join Movie_Star ms
+    On fp.Id=ms.FP_ID
