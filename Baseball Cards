@@ -1,0 +1,26 @@
+In this example I have created a small Baseball card data base where I am updating and delete informaton for certain players. 
+
+Create Table Baseball_Cards (
+    Id Integer Primary Key Autoincrement,
+    Fullname TEXT,
+    Rookie_Year INTEGER,
+    Card_Value INTEGER);
+    
+    
+Insert into Baseball_cards (Fullname, Rookie_Year, Card_Value) 
+Values ('Bobby Witt Jr', 2022, 500);
+Insert into Baseball_cards (Fullname, Rookie_Year, Card_Value) 
+Values ('Julio Rodriguez', 2022, 700);
+Insert into Baseball_cards (Fullname, Rookie_Year, Card_Value) 
+Values ('Mickey Mantle', 1952, 15000000);
+    
+
+Select * FROM Baseball_Cards;
+
+Update Baseball_Cards set Card_Value = 1500 where id = 3;
+
+Select * FROM Baseball_Cards;
+
+Delete from Baseball_Cards where id = 2;
+
+Select * FROM Baseball_Cards;
